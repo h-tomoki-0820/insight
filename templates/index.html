@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <head>
+    </head>
+    <body>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" accept=".jpg*" required>
+            <input type="submit" value="送信">
+        </form>
+        {%- if flag %}
+            {%- for i in range( array|length) %}
+                <img src={{ array[i] }} alt="a" height="auto" width="100px">
+            {%- endfor %}
+        {%- endif %}
+
+    </body>
+</html>
